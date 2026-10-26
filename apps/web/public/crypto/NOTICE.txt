@@ -1,0 +1,7 @@
+Coin and network icons are from web3icons (@web3icons/core 4.0.58, "branded" variants),
+https://github.com/0xa3k5/web3icons — MIT License, Copyright (c) 0xa3k5.
+
+Logos are trademarks of their respective owners and are used here only to identify
+the corresponding cryptocurrencies and networks.
+
+Regenerate with the extractor script described in the README (Coin & network icons).

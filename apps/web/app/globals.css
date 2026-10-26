@@ -1,0 +1,99 @@
+@import 'tailwindcss';
+
+/* Design tokens. Components use these via Tailwind's theme (bg-surface, text-muted, ...). */
+:root {
+  --bg: #f7f7fb;
+  --surface: #ffffff;
+  --surface-2: #f1f1f7;
+  --border: #e4e4ee;
+  --text: #15151f;
+  --muted: #64647a;
+  --brand: #5b4ef0;
+  --brand-strong: #4a3de0;
+  --brand-soft: #ecebfe;
+  --success: #12a150;
+  --success-soft: #e6f6ec;
+  --warning: #b7791f;
+  --warning-soft: #fdf4e3;
+  --danger: #d93a3a;
+  --danger-soft: #fdecec;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d0d14;
+    --surface: #15151f;
+    --surface-2: #1c1c29;
+    --border: #2a2a3a;
+    --text: #ededf5;
+    --muted: #9a9ab0;
+    --brand: #8379ff;
+    --brand-strong: #9a92ff;
+    --brand-soft: #23214a;
+    --success: #3ccf7f;
+    --success-soft: #12301f;
+    --warning: #e8b04f;
+    --warning-soft: #33280f;
+    --danger: #f26d6d;
+    --danger-soft: #3a1717;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.prose-docs h2 {
+  @apply mt-12 mb-3 text-2xl font-semibold tracking-tight scroll-mt-24;
+}
+.prose-docs h3 {
+  @apply mt-8 mb-2 text-lg font-semibold;
+}
+.prose-docs p,
+.prose-docs li {
+  @apply leading-7 text-muted;
+}
+.prose-docs ul {
+  @apply list-disc pl-6 space-y-1;
+}
+.prose-docs code:not(pre code) {
+  @apply rounded bg-surface-2 px-1.5 py-0.5 font-mono text-[0.85em] text-text;
+}
+.prose-docs pre {
+  @apply my-4 overflow-x-auto rounded-xl border border-border bg-surface-2 p-4 font-mono text-[13px] leading-6 text-text;
+}
+.prose-docs table {
+  @apply my-4 w-full text-sm;
+}
+.prose-docs th {
+  @apply border-b border-border py-2 pr-4 text-left font-medium;
+}
+.prose-docs td {
+  @apply border-b border-border py-2 pr-4 align-top text-muted;
+}
